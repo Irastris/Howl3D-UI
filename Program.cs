@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace Howl3D_UI;
+namespace Howl3D;
 
 class Program
 {

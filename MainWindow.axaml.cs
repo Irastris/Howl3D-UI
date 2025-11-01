@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace Howl3D_UI;
+namespace Howl3D;
 
 public partial class MainWindow : Window
 {

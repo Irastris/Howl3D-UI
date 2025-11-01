@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace Howl3D_UI;
+namespace Howl3D;
 
 public partial class App : Application
 {
