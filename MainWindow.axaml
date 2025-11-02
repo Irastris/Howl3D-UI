@@ -2,8 +2,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="Howl3D.MainWindow"
         Title="Howl3D" MinWidth="960" MinHeight="540" Width="1280" Height="720">
-    <Grid RowDefinitions="*,Auto,*">
-        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Spacing="10">
+    <Grid RowDefinitions="*,*">
+        <!--
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" Spacing="10">
             <TextBlock Text="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontWeight="Bold"/>
             <Button Content="Click Me!" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="100"/>
             <Slider Minimum="0" Maximum="100" Value="50" Width="200" HorizontalAlignment="Center"/>
@@ -16,7 +17,12 @@
                 <ComboBoxItem>Item 3</ComboBoxItem>
             </ComboBox>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="2">
+        -->
+        <!-- Drag and drop area -->
+        <Border Grid.Row="0" BorderBrush="#FFCCCCCC" Margin="10">
+            <TextBlock Text="Drag and drop media here" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="#666666"/>
+        </Border>
+        <StackPanel Grid.Row="1">
             <!-- TODO: How do I make this a reusable template? -->
             <Border BorderBrush="#FFCCCCCC" Margin="10 0 10 0">
                 <StackPanel Orientation="Horizontal" Spacing="10">
