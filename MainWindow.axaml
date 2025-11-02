@@ -5,5 +5,29 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Howl3D.MainWindow"
         Title="Howl3D">
-    Welcome to Avalonia!
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Top">
+            <Menu>
+                <MenuItem Header="Howl3D">
+                    <MenuItem Header="About"/>
+                    <Separator/>
+                    <MenuItem Header="GitHub"/>
+                </MenuItem>
+            </Menu>
+        </WrapPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+            <TextBlock Text="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontWeight="Bold"/>
+            <Button Content="Click Me!" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="100"/>
+            <Slider Minimum="0" Maximum="100" Value="50" Width="200" HorizontalAlignment="Center"/>
+            <ProgressBar Height="30" Minimum="0" Maximum="100" Value="14" ShowProgressText="True"/>
+            <CheckBox IsChecked="True" HorizontalAlignment="Center">
+                Checkable Item
+            </CheckBox>
+            <ComboBox SelectedIndex="0" MaxDropDownHeight="300" HorizontalAlignment="Center">
+                <ComboBoxItem>Item 1</ComboBoxItem>
+                <ComboBoxItem>Item 2</ComboBoxItem>
+                <ComboBoxItem>Item 3</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+    </DockPanel>
 </Window>
