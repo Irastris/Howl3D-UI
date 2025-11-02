@@ -2,21 +2,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="Howl3D.MainWindow"
         Title="Howl3D" MinWidth="960" MinHeight="540" Width="1280" Height="720">
-    <DockPanel>
-        <WrapPanel DockPanel.Dock="Top">
-            <Menu>
-                <MenuItem Header="Howl3D">
-                    <MenuItem Header="About"/>
-                    <Separator/>
-                    <MenuItem Header="GitHub"/>
-                </MenuItem>
-            </Menu>
-        </WrapPanel>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+    <Grid RowDefinitions="*,Auto,*">
+        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Spacing="10">
             <TextBlock Text="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontWeight="Bold"/>
             <Button Content="Click Me!" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="100"/>
             <Slider Minimum="0" Maximum="100" Value="50" Width="200" HorizontalAlignment="Center"/>
-            <ProgressBar Height="30" Minimum="0" Maximum="100" Value="14" ShowProgressText="True"/>
             <CheckBox IsChecked="True" HorizontalAlignment="Center">
                 Checkable Item
             </CheckBox>
@@ -26,5 +16,34 @@
                 <ComboBoxItem>Item 3</ComboBoxItem>
             </ComboBox>
         </StackPanel>
-    </DockPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <!-- TODO: How do I make this a reusable template? -->
+            <Border BorderBrush="#FFCCCCCC" Margin="10 0 10 0">
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <!-- Thumbnail placeholder created with https://placehold.co -->
+                    <Image Source="/Assets/thumbnail_placeholder.png" Width="160" Height="90"/>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Spacing="10">
+                        <TextBlock Text="exampleA.mp4" FontSize="20" FontWeight="Bold"/>
+                        <Grid ColumnDefinitions="Auto,Auto" VerticalAlignment="Center">
+                            <ProgressBar Grid.Column="0" Width="200" Height="20" Value="50" Margin="0,0,10,0"/>
+                            <TextBlock Grid.Column="1" Text="Processing..." VerticalAlignment="Center"/>
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <!-- Duplicate for preview -->
+            <Border BorderBrush="#FFCCCCCC" Margin="10">
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <Image Source="/Assets/thumbnail_placeholder.png" Width="160" Height="90"/>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Spacing="10">
+                        <TextBlock Text="exampleB.mp4" FontSize="20" FontWeight="Bold"/>
+                        <Grid ColumnDefinitions="Auto,Auto" VerticalAlignment="Center">
+                            <ProgressBar Grid.Column="0" Width="200" Height="20" Value="0" Margin="0,0,10,0"/>
+                            <TextBlock Grid.Column="1" Text="Processing..." VerticalAlignment="Center"/>
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
 </Window>
