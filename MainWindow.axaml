@@ -2,9 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Howl3D.MainWindow"
-        Title="Howl3D">
+        Title="Howl3D" MinWidth="960" MinHeight="540" Width="1280" Height="720">
     <DockPanel>
         <WrapPanel DockPanel.Dock="Top">
             <Menu>
