@@ -2,55 +2,67 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="Howl3D.MainWindow"
         Title="Howl3D" MinWidth="960" MinHeight="540" Width="1280" Height="720">
-    <Grid ColumnDefinitions="*,*">
-        <!--
-        <StackPanel Grid.Column="0" VerticalAlignment="Center" Spacing="10">
-            <TextBlock Text="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontWeight="Bold"/>
-            <Button Content="Click Me!" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="100"/>
-            <Slider Minimum="0" Maximum="100" Value="50" Width="200" HorizontalAlignment="Center"/>
-            <CheckBox IsChecked="True" HorizontalAlignment="Center">
-                Checkable Item
-            </CheckBox>
-            <ComboBox SelectedIndex="0" MaxDropDownHeight="300" HorizontalAlignment="Center">
-                <ComboBoxItem>Item 1</ComboBoxItem>
-                <ComboBoxItem>Item 2</ComboBoxItem>
-                <ComboBoxItem>Item 3</ComboBoxItem>
-            </ComboBox>
-        </StackPanel>
-        -->
-        <!-- Drag and drop area -->
-        <Border Grid.Column="0" Margin="10" BorderBrush="#FFCCCCCC">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="Drag and drop media here"/>
+    <Grid>
+        <Grid ColumnDefinitions="*,*">
+            <!--
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" Spacing="10">
+                <TextBlock Text="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontWeight="Bold"/>
+                <Button Content="Click Me!" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="30" Width="100"/>
+                <Slider Minimum="0" Maximum="100" Value="50" Width="200" HorizontalAlignment="Center"/>
+                <CheckBox IsChecked="True" HorizontalAlignment="Center">
+                    Checkable Item
+                </CheckBox>
+                <ComboBox SelectedIndex="0" MaxDropDownHeight="300" HorizontalAlignment="Center">
+                    <ComboBoxItem>Item 1</ComboBoxItem>
+                    <ComboBoxItem>Item 2</ComboBoxItem>
+                    <ComboBoxItem>Item 3</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            -->
+            <!-- Drag and drop area -->
+            <Border Grid.Column="0" Margin="10" BorderBrush="#FFCCCCCC">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="Drag and drop media here"/>
+            </Border>
+            <!-- Jobs area -->
+            <StackPanel Grid.Column="1" Spacing="10">
+                <!-- TODO: How do I make this a reusable template? -->
+                <Border Margin="10" BorderBrush="#FFCCCCCC">
+                    <StackPanel Spacing="10" Orientation="Horizontal">
+                        <!-- Thumbnail placeholder created with https://placehold.co -->
+                        <Image Width="160" Height="90" Source="/Assets/thumbnail_placeholder.png"/>
+                        <StackPanel Spacing="10" Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock FontSize="20" FontWeight="Bold" Text="exampleA.mp4"/>
+                            <Grid ColumnDefinitions="*,*">
+                                <ProgressBar Grid.Column="0" Width="200" Height="20" Margin="0,0,10,0" Value="50"/>
+                                <TextBlock Grid.Column="1" Text="Processing..."/>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <!-- Duplicate for preview -->
+                <Border Margin="10" BorderBrush="#FFCCCCCC">
+                    <StackPanel Spacing="10" Orientation="Horizontal">
+                        <Image Width="160" Height="90" Source="/Assets/thumbnail_placeholder.png"/>
+                        <StackPanel Spacing="10" Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock FontSize="20" FontWeight="Bold" Text="exampleB.mp4"/>
+                            <Grid ColumnDefinitions="*,*">
+                                <ProgressBar Grid.Column="0" Width="200" Height="20" Margin="0,0,10,0" Value="0"/>
+                                <TextBlock Grid.Column="1" Text="Processing..."/>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <!-- Modal Container -->
+        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#CE000000">
+            <!-- Modal Dialog -->
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF1C1C1C">
+                <StackPanel Orientation="Vertical" Spacing="10" Margin="10">
+                    <TextBlock HorizontalAlignment="Center" Text="Hello, world!" />
+                    <Button HorizontalAlignment="Center" Content="Close"/>
+                </StackPanel>
+            </Border>
         </Border>
-        <!-- Jobs area -->
-        <StackPanel Grid.Column="1" Spacing="10">
-            <!-- TODO: How do I make this a reusable template? -->
-            <Border Margin="10" BorderBrush="#FFCCCCCC">
-                <StackPanel Spacing="10" Orientation="Horizontal">
-                    <!-- Thumbnail placeholder created with https://placehold.co -->
-                    <Image Width="160" Height="90" Source="/Assets/thumbnail_placeholder.png"/>
-                    <StackPanel Spacing="10" Orientation="Vertical" VerticalAlignment="Center">
-                        <TextBlock FontSize="20" FontWeight="Bold" Text="exampleA.mp4"/>
-                        <Grid ColumnDefinitions="*,*">
-                            <ProgressBar Grid.Column="0" Width="200" Height="20" Margin="0,0,10,0" Value="50"/>
-                            <TextBlock Grid.Column="1" Text="Processing..."/>
-                        </Grid>
-                    </StackPanel>
-                </StackPanel>
-            </Border>
-            <!-- Duplicate for preview -->
-            <Border Margin="10" BorderBrush="#FFCCCCCC">
-                <StackPanel Spacing="10" Orientation="Horizontal">
-                    <Image Width="160" Height="90" Source="/Assets/thumbnail_placeholder.png"/>
-                    <StackPanel Spacing="10" Orientation="Vertical" VerticalAlignment="Center">
-                        <TextBlock FontSize="20" FontWeight="Bold" Text="exampleB.mp4"/>
-                        <Grid ColumnDefinitions="*,*">
-                            <ProgressBar Grid.Column="0" Width="200" Height="20" Margin="0,0,10,0" Value="0"/>
-                            <TextBlock Grid.Column="1" Text="Processing..."/>
-                        </Grid>
-                    </StackPanel>
-                </StackPanel>
-            </Border>
-        </StackPanel>
     </Grid>
 </Window>
