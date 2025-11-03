@@ -55,12 +55,12 @@
             </StackPanel>
         </Grid>
         <!-- Modal Container -->
-        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#CE000000">
+        <Border x:Name="ModalContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#CE000000">
             <!-- Modal Dialog -->
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF1C1C1C">
                 <StackPanel Orientation="Vertical" Spacing="10" Margin="10">
                     <TextBlock HorizontalAlignment="Center" Text="Hello, world!" />
-                    <Button HorizontalAlignment="Center" Content="Close"/>
+                    <Button x:Name="CloseModalButton" HorizontalAlignment="Center" Content="Close"/>
                 </StackPanel>
             </Border>
         </Border>
