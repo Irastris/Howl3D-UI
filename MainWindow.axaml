@@ -4,7 +4,7 @@
         RequestedThemeVariant="Dark"
         Title="Howl3D" MinWidth="960" MinHeight="540" Width="1280" Height="720">
     <Grid>
-        <Grid ColumnDefinitions="*,*">
+        <Grid ColumnDefinitions="*,Auto">
             <!--
             <StackPanel Grid.Column="0" VerticalAlignment="Center" Spacing="10">
                 <TextBlock Text="Hello, world!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" FontWeight="Bold"/>
