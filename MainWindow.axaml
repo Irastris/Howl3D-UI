@@ -21,7 +21,7 @@
             </StackPanel>
             -->
             <!-- Drag and drop area -->
-            <Border Grid.Column="0" Margin="10" BorderBrush="#FFCCCCCC">
+            <Border x:Name="DragDropZone" Grid.Column="0" Margin="10" Background="#00000000" BorderBrush="#FFCCCCCC" DragDrop.AllowDrop="True"> <!-- TODO: Transparent background seems necessary for the entire zone to be droppable, is that the only solution? -->
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="Drag and drop media here"/>
             </Border>
             <!-- Jobs area -->
@@ -56,7 +56,7 @@
             </StackPanel>
         </Grid>
         <!-- Modal Container -->
-        <Border x:Name="ModalContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#CE000000">
+        <Border x:Name="ModalContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#CE000000" IsVisible="False">
             <!-- Modal Dialog -->
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF1C1C1C">
                 <StackPanel Orientation="Vertical" Spacing="10" Margin="10">
