@@ -23,7 +23,10 @@
             <!-- Drag and drop area -->
             <Grid x:Name="DragDropZone" Grid.Column="0" Margin="10" Background="#00000000" DragDrop.AllowDrop="True"> <!-- TODO: Transparent background seems necessary for the entire zone to be droppable, is that the only solution? -->
                 <Rectangle StrokeDashArray="8, 4" Stroke="White" StrokeThickness="2"/>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="Drag and drop media here"/>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+                    <TextBlock FontSize="18" Text="Drag and drop media here"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="14" Text="or click to open a file dialog"/>
+                </StackPanel>
             </Grid>
             <!-- Jobs area -->
             <StackPanel Grid.Column="1" Spacing="10">
