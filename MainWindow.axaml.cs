@@ -15,9 +15,15 @@ public partial class MainWindow : Window
         {
             ModalContainer.IsVisible = true;
         });
+        DragDropZoneBtn.Click += DragDropZone_Click;
         
         // Modal interactions
         CloseModalButton.Click += CloseModalButton_Click;
+    }
+    
+    private void DragDropZone_Click(object sender, RoutedEventArgs e)
+    {
+        ModalContainer.IsVisible = true;
     }
     
     private void CloseModalButton_Click(object sender, RoutedEventArgs e)

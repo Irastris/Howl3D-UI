@@ -3,6 +3,16 @@
         x:Class="Howl3D.MainWindow"
         RequestedThemeVariant="Dark"
         Title="Howl3D" MinWidth="960" MinHeight="540" Width="1280" Height="720">
+    <Window.Styles>
+        <!-- Styles to make the drag and drop zone's clickable area visually unobstrusive -->
+        <Style Selector="Button.DragDropZoneBtn:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#00000000"/>
+        </Style>
+        <Style Selector="Button.DragDropZoneBtn:pressed">
+            <Setter Property="Background" Value="#00000000"/>
+            <Setter Property="RenderTransform" Value="none"/>
+        </Style>
+    </Window.Styles>
     <Grid>
         <Grid ColumnDefinitions="*,Auto">
             <!--
@@ -27,6 +37,7 @@
                     <TextBlock FontSize="18" Text="Drag and drop media here"/>
                     <TextBlock HorizontalAlignment="Center" FontSize="14" Text="or click to open a file dialog"/>
                 </StackPanel>
+                <Button x:Name="DragDropZoneBtn" Classes="DragDropZoneBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#00000000"/>
             </Grid>
             <!-- Jobs area -->
             <StackPanel Grid.Column="1" Spacing="10">
