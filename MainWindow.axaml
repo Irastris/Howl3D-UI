@@ -1,5 +1,6 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:howl3D="clr-namespace:Howl3D"
         x:Class="Howl3D.MainWindow"
         RequestedThemeVariant="Dark"
         Title="Howl3D" MinWidth="960" MinHeight="540" Width="1280" Height="720">
@@ -75,6 +76,13 @@
                     <Button x:Name="CloseModalButton" HorizontalAlignment="Center" Content="Close"/>
                 </StackPanel>
             </Border>
+        </Border>
+        <!-- Loader Container -->
+        <Border x:Name="LoaderContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FF000000" IsVisible="True">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="40">
+                <TextBlock FontSize="24" Text="Waiting for backend"/>
+                <howl3D:BootAnimationControl HorizontalAlignment="Center" FontFamily="/Assets/segoe_slboot.ttf#Segoe Boot Semilight" FontSize="48"/>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>
